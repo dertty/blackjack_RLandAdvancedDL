@@ -151,9 +151,9 @@ class BlackjackEnv(gym.Env):
 
     def reset(
         self,
-        seed: Optional[int] = None,
-        options: Optional[dict] = None,
-    ):
+            seed: Optional[int] = None,
+            options: Optional[dict] = None,
+    ) -> object:
         super().reset(seed=seed)
         self.dealer = draw_hand(self.np_random)
         self.player = draw_hand(self.np_random)
